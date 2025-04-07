@@ -1,0 +1,96 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px 12px;  /* Reducido el padding */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 13px;  /* Reducido el tamaño de la fuente */
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+}
+
+tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Estilo para la fila cuando se pasa el ratón */
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Bordes y espaciado de las celdas */
+td {
+    vertical-align: middle;
+}
+
+/* Estilos de los iconos en las acciones */
+.logos {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 6px;  /* Reducido el padding de los botones */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.logos:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.logos i {
+    font-size: 18px;  /* Reducido el tamaño de los iconos */
+    color: #333;
+}
+
+.logos i:hover {
+    color: #007BFF;
+}
+
+/* Estilo del encabezado */
+hr {
+    border: 0;
+    border-top: 3px solid #007BFF;
+    width: 50px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo del mensaje cuando no hay estudiantes */
+p {
+    color: #888;
+    font-style: italic;
+}
+
+/* Estilo para la nueva columna de dirección y otros campos adicionales */
+td div {
+    text-align: left;
+    font-size: 12px;  /* Reducido el tamaño de la fuente */
+    color: #555;
+    line-height: 1.4;
+}
+
+td div span {
+    display: block;
+    margin-bottom: 3px;  /* Reducido el margen entre los campos */
+}
+
+/* Estilo para el género, asegurando que se alinee correctamente */
+td div span:last-child {
+    font-weight: bold;
+}

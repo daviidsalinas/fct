@@ -1,3 +1,12 @@
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<hr>
+<h2>Estudiantes</h2>
+
+
+<p>Hacer aqui una barra de busqueda :D</p>
 <table *ngIf="students.length > 0">
   <thead>
     <tr>
@@ -6,6 +15,8 @@
       <th>Apellidos</th>
       <th>Teléfono</th>
       <th>Email</th>
+      <th>Dirección</th>
+      <th>Género</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -14,11 +25,23 @@
       <td>{{ student.id }}</td>
       <td>{{ student.name }}</td>
       <td>{{ student.surnames }}</td>
-      <td>{{ student.phoneNumbers.join(', ') }}</td> <!-- Unir los números de teléfono si son varios -->
+      <td>{{ student.phoneNumbers.join(', ') }}</td>
       <td>{{ student.email }}</td>
       <td>
-        <button (click)="editStudent(student.id)">Editar</button>
-        <button (click)="deleteStudent(student.id)">Eliminar</button>
+        <div class="details">
+          <span><strong>Dirección:</strong> {{ student.address.street }}, {{ student.address.city }}, {{ student.address.state }} - {{ student.address.postalCode }}</span>
+          <span><strong>Registro:</strong> {{ student.registerDate | date: 'short' }}</span>
+          <span><strong>NIF:</strong> {{ student.nif }}</span>
+        </div>
+      </td>
+      <td>{{ student.gender === 'M' ? 'Masculino' : 'Femenino' }}</td>
+      <td>
+        <button (click)="editStudent(student.id)" class="logos">
+          <i class="bx bx-edit"></i>
+        </button>
+        <button (click)="deleteStudent(student.id)" class="logos">
+          <i class='bx bxs-trash'></i>
+        </button>
       </td>
     </tr>
   </tbody>
