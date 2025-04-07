@@ -1,0 +1,28 @@
+<table *ngIf="students.length > 0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Teléfono</th>
+      <th>Email</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.surnames }}</td>
+      <td>{{ student.phoneNumbers.join(', ') }}</td> <!-- Unir los números de teléfono si son varios -->
+      <td>{{ student.email }}</td>
+      <td>
+        <button (click)="editStudent(student.id)">Editar</button>
+        <button (click)="deleteStudent(student.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Mensaje en caso de que no haya estudiantes -->
+<p *ngIf="students.length === 0">No hay estudiantes disponibles.</p>  

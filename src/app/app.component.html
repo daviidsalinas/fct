@@ -1,0 +1,21 @@
+<header>
+    <h3>IES LAS ESPEÑETAS FCT</h3>
+</header>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+    <nav>
+        <a routerLink="/" routerLinkActive="active">Inicio</a>
+    </nav>
+    <nav>
+        <a routerLink="/students" routerLinkActive="active">Estudiantes</a>
+    </nav>
+    <nav>
+        <a routerLink="/teachers" routerLinkActive="active">Profesores</a>
+    </nav>
+</div>
+
+<!-- Sección principal donde se carga el contenido dinámico -->
+<main>
+    <router-outlet></router-outlet>
+</main>
